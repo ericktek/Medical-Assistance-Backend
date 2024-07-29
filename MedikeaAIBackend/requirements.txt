@@ -27,9 +27,9 @@ google-generativeai
 terminado
 text-unidecode
 textblob
-tf_keras2                     
+keras                     
 transformers 
 urllib3
-websocket-client 
-tensflow
-
+websocket-client
+tensorflow
+pycryptodome
