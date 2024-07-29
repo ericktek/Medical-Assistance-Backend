@@ -16,7 +16,7 @@ nltk.download('wordnet')
 
 print('Loading Word2Vec model...')
 current_time = time.time()
-word2vec_model = api.load('word2vec-google-news-150')
+word2vec_model = api.load('word2vec-google-news-300')
 
 
 end_time = time.time()
