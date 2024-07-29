@@ -1,0 +1,39 @@
+version: "3.7"
+
+networks:
+  ansnet:
+
+volumes:
+  data_base_data:
+  phpmyadmindata:
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: madialassistantv1
+    container_name: nodecontainer
+    restart: always
+    working_dir: /MedikeaAIBACKEND/
+    volumes:
+      - ./:/MedikeaAIBACKEND/
+    ports:
+      - "3000:3000"
+    networks:
+      - ansnet
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:10.4.8-bionic
+    container_name: ans-v2-maria
+    environment:
+      MYSQL_DATABASE: journey_node
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: ans
+      MYSQL_PASSWORD: admin
+    volumes:
+      - data_base_data:/var/lib/mysql/
+    networks:
+      - ansnet

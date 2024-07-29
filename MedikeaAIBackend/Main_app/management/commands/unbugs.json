@@ -1,0 +1,279 @@
+{
+    "diseases": [
+      {
+        "name": "Myelodysplastic Syndrome (MDS)",
+        "description": "Pre-malignant condition, primarily disease of the old people.",
+        "investigations": [
+          "Similar to aplastic anaemia, plus analysis of 5q deletion."
+        ],
+        "treatments": [
+          {
+            "Pharmacological Treatment": [
+              {
+                "class": "B",
+                "name": "Blood transfusion",
+                "reason": "for symptomatic treatment"
+              },
+              {
+                "class": "S",
+                "name": "azacitidine (SC)",
+                "weight": "75mg/m2",
+                "frequency": "24 hourly for 7 days, repeat after every 28 days"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bleeding Disorders",
+        "subcategories": [
+          {
+            "name": "Hereditary Bleeding Disorders",
+            "description": "Includes haemophilia A and B, Von Willebrand disease",
+            "subcategories": [
+              {
+                "name": "Haemophilia",
+                "description": "Haemophilia is an inherited, X-linked lifelong bleeding disorder which affects males almost exclusively.",
+                "clinical_presentation": [
+                  "Spontaneous muscle and joint bleeding without injury",
+                  "Prolonged bleeding after injury",
+                  "Epistaxis and easy bruising",
+                  "Complication includes arthropathy and disability"
+                ],
+                "subtypes": [
+                  {
+                    "name": "Haemophilia A (Factor VIII deficiency)",
+                    "description": "Is the most common of the hereditary clotting factor deficiencies and are caused by deficiency of factor VIII."
+                  },
+                  {
+                    "name": "Haemophilia B (Factor IX deficiency)",
+                    "description": "It is caused by deficiency of clotting factor IX. Presentation as in Haemophilia A, this is less common 20%."
+                  }
+                ],
+                "classification": [
+                  {
+                    "severity": "Severe",
+                    "factor_VIII_level": "<1% of normal",
+                    "factor_IX_level": "≤ 0.01 U/ml",
+                    "clinical_features": [
+                      "Spontaneous haemorrhage",
+                      "Frequent spontaneous haemarthrosis"
+                    ]
+                  },
+                  {
+                    "severity": "Moderate",
+                    "factor_VIII_level": "2-5% of normal",
+                    "factor_IX_level": "0.01-0.05 U/ml",
+                    "clinical_features": [
+                      "Haemorrhage secondary to trauma or surgery",
+                      "Occasional spontaneous haemarthrosis"
+                    ]
+                  },
+                  {
+                    "severity": "Mild",
+                    "factor_VIII_level": "5-40% of normal",
+                    "factor_IX_level": "5-40% of normal",
+                    "clinical_features": [
+                      "Haemorrhage post trauma or surgery",
+                      "Rare spontaneous haemarthrosis"
+                    ]
+                  }
+                ],
+                "investigations": [
+                  "Prolonged aPTT but normal PT and Platelets counts",
+                  "Confirm by factor VIII or IX assay"
+                ],
+                "treatments": [
+                  {
+                    "Non-Pharmacological Treatment": [
+                      "Avoid I.M injections and use small gauge needles if necessary",
+                      "Inform the patient and parents thoroughly on the problem, and provide means of alerting other medical/pharmaceutical personnel",
+                      "Genetic counselling",
+                      "For Acute Bleeding episodes (RICE): Rest, Ice/cold pack – 5 minutes on, 10 min off, Compression and Elevate the joint.",
+                      "For haemarthrosis – AVOID incising or aspiration of the affected joint. Treat by replacing the specific factor e.g factor 8 or 9 concentrate if available or FFP (10-15ml/kg), joint support and tabs Paracetamol for pain."
+                    ]
+                  },
+                  {
+                    "Pharmacological Treatment": [
+                      {
+                        "type": "Haemophilia A (Factor VIII Deficiency) no Inhibitor",
+                        "severity": "Minor bleed",
+                        "class": "S",
+                        "name": "Factor VIII (IV)",
+                        "dose": "20–40 IU/kg"
+                      },
+                      {
+                        "type": "Haemophilia A (Factor VIII Deficiency) no Inhibitor",
+                        "severity": "Major bleed",
+                        "class": "S",
+                        "name": "Factor VIII (IV)",
+                        "dose": "50–100 IU/kg 12 hourly for 3-5 days or until bleeding stops",
+                        "note": "Expected response: 1 IU/kg = 2% rise in factor VIII level. Half-life Factor VIII: 8–24 hours"
+                      },
+                      {
+                        "type": "Haemophilia B (Factor IX deficiency) no inhibitor",
+                        "severity": "Minor bleed",
+                        "class": "S",
+                        "name": "Factor IX (IV)",
+                        "dose": "20-50 IU/kg"
+                      },
+                      {
+                        "type": "Haemophilia B (Factor IX deficiency) no inhibitor",
+                        "severity": "Major bleed",
+                        "class": "S",
+                        "name": "Factor IX (IV)",
+                        "dose": "100 IU/kg",
+                        "note": "Expected response: 1 IU/kg = 1.5 rise in the factor IX level. Half-life Factor IX: 16–24 hours"
+                      },
+                      {
+                        "class": "D",
+                        "name": "Fresh frozen plasma (FFP)",
+                        "condition": "Can be used where factor concentrate is unavailable.",
+                        "dose": "Average dose 10-15 mls/kg"
+                      },
+                      {
+                        "note": [
+                          "If there is no response to appropriate replacement therapy tests for inhibitors (an inhibitor is formed when one develops antibodies against factor concentrates)",
+                          "Detection of inhibitor is by aPTT mix study and confirmed by Bethesda assay (BU)"
+                        ]
+                      },
+                      {
+                        "name": "Factor VIII Inhibitor Management Options",
+                        "options": [
+                          "High dose factor concentrate infusion",
+                          "Use by-pass agent like FEIBA (Factor Eight Inhibitor By-passing Agent)",
+                          "Immune tolerance induction therapy (ITI)",
+                          "In case of emergency surgery consider plasmapheresis",
+                          "Adjuvant antifibrinolytic agents eg Tranexamic acid can be used with either of the above"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "notes": [
+                  "All patients suspected with haemophilia A or B refer to higher facility with adequate expertise or consult haematology Unit.",
+                  "Children with severe haemophilia are recommended to be on low dose prophylaxis of factor concentrate.",
+                  "Male circumcision should be done at a hospital where factor concentrate is available. Concentrate should be given before and after the procedure."
+                ]
+              },
+              {
+                "name": "Von Willebrand Disease (VWD)",
+                "description": "Von Willebrand Disease is an inherited disease due to deficiency of vWF. It is the commonest bleeding disorder in the population especially in women.",
+                "clinical_presentation": [
+                  "History of easy bruising",
+                  "Menorrhagia",
+                  "Gum bleeding",
+                  "Joint bleeding in severe cases"
+                ],
+                "investigations": [
+                  "Confirmatory test: VWF level assay",
+                  "PT, aPTT, and platelet count are normal except in severe cases."
+                ],
+                "treatments": [
+                  {
+                    "Pharmacological Treatment": [
+                      {
+                        "class": "C",
+                        "name": "etamsylate (PO)",
+                        "dose": "500mg 8 hourly until the bleeding stops"
+                      },
+                      {
+                        "class": "C",
+                        "name": "tranexamic acid (PO)",
+                        "dose": "500mg 8 hourly until bleeding is stopped"
+                      },
+                      {
+                        "class": "S",
+                        "name": "Desmopressin (IV)",
+                        "dose": "0.3µg/kg IV stat. Max. Dose 20µg"
+                      }
+                    ]
+                  }
+                ],
+                "notes": [
+                  "Patient unresponsive to DDVAP may be treated with virus-inactivated vWF containing FVIII concentrate.",
+                  "Never give Etamsylate or Tranexamic acid to patients bleeding per urethral."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Acquired Bleeding Disorders/Platelet Disorders",
+            "subcategories": [
+              {
+                "name": "Disseminated Intravascular Coagulation (DIC)",
+                "clinical_features": [
+                  "Usually are related to the underlying disorder",
+                  "Bleeding manifestation",
+                  "Extensive organ dysfunction",
+                  "Shock, renal cortical ischemia, coma, delirium and focal neurological symptoms"
+                ],
+                "treatments": [
+                  {
+                    "Pharmacological Treatment": [
+                      "Rapid and appropriate treatment of the underlying disorder including antibiotics for infection",
+                      "Surgical debridement of necrotic tissues",
+                      "Chemotherapy for malignant causes",
+                      "Evacuation of dead fetus",
+                      "Platelets transfusion for thrombocytopenia",
+                      "Fresh frozen plasma (FFP) for coagulation factor depletion",
+                      "Monitor prothrombin time (PT), international normalized ratio (INR), activated partial thromboplastin (aPTT), platelet count and fibrinogen"
+                    ]
+                  }
+                ],
+                "notes": [
+                  "If patient is not bleeding Platelets concentrate is contraindicated.",
+                  "If DIC is severe enough to cause multiorgan dysfunction, management in an intensive care unit is required."
+                ]
+              },
+              {
+                "name": "Idiopathic Thrombocytopenic Purpura (ITP)",
+                "clinical_features": [
+                  "Long history of Purpura, menorrhagia, epistaxis and gingival haemorrhage",
+                  "Intracerebral haemorrhage occurs infrequently but is the most cause of death",
+                  "Overt bleeding is rare unless thrombocytopenia severe (less than 10 X 109/L)"
+                ],
+                "note": "A palpable spleen strongly suggests that ITP is NOT the cause for thrombocytopenia.",
+                "treatments": [
+                  {
+                    "Non-Pharmacological Treatment": [
+                      "Patients with platelet counts over 50 X109/L usually do not have spontaneous bleeding and may undergo invasive procedure.",
+                      "Emergency treatment of acute bleeding caused by severe thrombocytopenia need immediate platelet transfusion."
+                    ]
+                  },
+                  {
+                    "Pharmacological Treatment": [
+                      {
+                        "class": "A",
+                        "name": "prednisolone (PO)",
+                        "dose": "1mg/kg/day for 3–6 weeks, then taper 10mg weekly",
+                        "condition": "For all patients with platelet counts below 30 X109/L"
+                      },
+                      {
+                        "class": "B",
+                        "name": "dexamethasone (IV)",
+                        "dose": "40mg in 500ml Normal saline running for 4 hours once a day for 4 days"
+                      },
+                      {
+                        "class": "S",
+                        "name": "human Immunoglobulin G (IV)",
+                        "dose": "0.4g/kg/day for 5 days",
+                        "condition": "If no response"
+                      },
+                      {
+                        "class": "S",
+                        "name": "human Immunoglobulin G (IV)",
+                        "dose": "1g/kg/day for 2 days followed by immediate platelet transfusion",
+                        "condition": "If no response"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

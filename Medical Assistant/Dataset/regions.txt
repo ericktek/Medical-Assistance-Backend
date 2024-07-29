@@ -1,0 +1,41 @@
+| Region           | Diseases More Affected                                    |
+|------------------|----------------------------------------------------------|
+| Dar es Salaam    | Malaria, Dengue Fever, Respiratory Infections            |
+| Arusha            | Altitude-related Disorders, Migraine, Asthma             |
+| Dodoma           | Waterborne Diseases, Osteoarthritis, Hypertension        |
+| Mwanza          | Schistosomiasis, Hepatitis B, Liver-related Conditions   |
+| Mbeya           | Respiratory Infections, Gastrointestinal Infections      |
+| Kilimanjaro    | Altitude-related Disorders, Hypertension, Asthma         |
+| Zanzibar        | Malaria, Cholera, Gastroenteritis                         |
+| Morogoro       | Malaria, Tuberculosis, Respiratory Infections            |
+| Tanga           | Malaria, Dengue Fever, Hypertension                       |
+| Kigoma        | Schistosomiasis, Malaria, Gastrointestinal Infections    |
+| Singida             | Waterborne Diseases, Meningitis, Hypertension            |
+| Iringa              | Respiratory Infections, Gastrointestinal Infections, Diabetes Mellitus |
+| Rukwa              | Malaria, Dengue Fever, Snakebites                         |
+| Manyara         | Altitude-related Disorders, Migraine, Respiratory Infections |
+| Shinyanga       | Schistosomiasis, Hepatitis C, Liver-related Conditions   |
+| Pwani              | Waterborne Diseases, Cholera, Hypertension                |
+| Lindi               | Malaria, Gastroenteritis, Respiratory Infections          |
+| Mara              | Malaria, Riverblindness (Onchocerciasis), Respiratory Infections |
+| Kagera           | Malaria, Tuberculosis, Gastrointestinal Infections        |
+| Ruvuma       | Malaria, Dengue Fever, Respiratory Infections              |
+| Katavi            | Malaria, Snakebites, Gastrointestinal Infections          |
+| Geita             | Schistosomiasis, Hepatitis B, Liver-related Conditions    |
+| Njombe          | Altitude-related Disorders, Respiratory Infections, Diabetes Mellitus |
+| Kagera           | Malaria, Tuberculosis, Gastrointestinal Infections        |
+| Simiyu          | Malaria, Gastroenteritis, Respiratory Infections           |
+| Songwe        | Malaria, Dengue Fever, Hypertension                        |
+| Mtwara         | Malaria, Gastrointestinal Infections, Respiratory Infections|
+| Ruvuma       | Malaria, Riverblindness (Onchocerciasis), Respiratory Infections |
+| Dodoma       | Waterborne Diseases, Osteoarthritis, Hypertension          |
+| Mbeya Urban         | Respiratory Infections, Hypertension, Diabetes Mellitus   |
+| Tabora              | Waterborne Diseases, Malaria, Gastrointestinal Infections |
+| Dodoma Rural        | Respiratory Infections, Tuberculosis, Hypertension        |
+| Mwanza Urban        | Hepatitis B, Malaria, Respiratory Infections               |
+| Kilimanjaro Rural   | Altitude-related Disorders, Gastrointestinal Infections   |
+| Zanzibar Urban      | Malaria, Dengue Fever, Cholera                             |
+| Kigoma Rural        | Schistosomiasis, Malaria, Respiratory Infections          |
+| Arusha Urban        | Altitude-related Disorders, Migraine, Asthma              |
+| Pwani Rural         | Waterborne Diseases, Gastroenteritis, Hypertension        |
+| Manyara Rural       | Altitude-related Disorders, Respiratory Infections, Malaria|

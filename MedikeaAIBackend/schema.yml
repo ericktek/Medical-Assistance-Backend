@@ -1,0 +1,5842 @@
+openapi: 3.0.3
+info:
+  title: Medical Assistant API
+  version: 1.0.0
+  description: Medical Assistant Api Documentation
+paths:
+  /api/v1/medicalasistant/category:
+    get:
+      operationId: v1_medicalasistant_category_list
+      description: List all specialities
+      summary: List Speciality
+      tags:
+      - Speciality
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Speciality'
+          description: ''
+    post:
+      operationId: v1_medicalasistant_category_create
+      description: Create a new speciality
+      summary: Create Speciality
+      tags:
+      - Speciality
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Speciality'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Speciality'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Speciality'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Speciality'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/category/{id}:
+    get:
+      operationId: v1_medicalasistant_category_retrieve
+      description: Retrieve a speciality by id
+      summary: Retrieve Speciality
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Speciality
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Speciality'
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+    patch:
+      operationId: v1_medicalasistant_category_partial_update
+      description: update a speciality by id
+      summary: update Speciality
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Speciality
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedSpeciality'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedSpeciality'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedSpeciality'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Speciality'
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+    delete:
+      operationId: v1_medicalasistant_category_destroy
+      description: delete a speciality by id
+      summary: delete Speciality
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Speciality
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/dataExctraction:
+    get:
+      operationId: v1_medicalasistant_dataExctraction_retrieve
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/medicalasistant/disease:
+    get:
+      operationId: v1_medicalasistant_disease_list
+      description: List all diseases
+      summary: List Disease
+      tags:
+      - Disease
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Disease'
+          description: ''
+    post:
+      operationId: v1_medicalasistant_disease_create
+      description: Create Disease in single or multiple at once
+      summary: Create Disease in bulk or single
+      tags:
+      - Disease
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: {}
+              description: Unspecified request body
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              additionalProperties: {}
+              description: Unspecified request body
+          multipart/form-data:
+            schema:
+              type: object
+              additionalProperties: {}
+              description: Unspecified request body
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Disease'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/disease/{id}:
+    patch:
+      operationId: v1_medicalasistant_disease_partial_update
+      description: update a disease by id
+      summary: update Disease
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Disease
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedDisease'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedDisease'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedDisease'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Disease'
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+    delete:
+      operationId: v1_medicalasistant_disease_destroy
+      description: delete a disease by id
+      summary: delete Disease
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Disease
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/doctorRecommendatinExtraction:
+    get:
+      operationId: v1_medicalasistant_doctorRecommendatinExtraction_retrieve
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/medicalasistant/occupation:
+    get:
+      operationId: v1_medicalasistant_occupation_list
+      description: List all occupations
+      summary: List Occupation
+      tags:
+      - Occupation
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupation'
+          description: ''
+    post:
+      operationId: v1_medicalasistant_occupation_create
+      description: Create a new occupation
+      summary: Create Occupation
+      tags:
+      - Occupation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Occupation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Occupation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Occupation'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Occupation'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/occupation/{id}:
+    patch:
+      operationId: v1_medicalasistant_occupation_partial_update
+      description: update a occupation by id
+      summary: update Occupation
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Occupation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedOccupation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedOccupation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedOccupation'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Occupation'
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+    delete:
+      operationId: v1_medicalasistant_occupation_destroy
+      description: delete a occupation by id
+      summary: delete Occupation
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Occupation
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/symptom:
+    get:
+      operationId: v1_medicalasistant_symptom_list
+      description: List all symptoms
+      summary: List Symptom
+      tags:
+      - Symptom
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Symptom'
+          description: ''
+    post:
+      operationId: v1_medicalasistant_symptom_create
+      description: Create a new symptom
+      summary: Create Symptom
+      tags:
+      - Symptom
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Symptom'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Symptom'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Symptom'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Symptom'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/symptom/{id}:
+    patch:
+      operationId: v1_medicalasistant_symptom_partial_update
+      description: update a symptom by id
+      summary: update Symptom
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Symptom
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedSymptom'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedSymptom'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedSymptom'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Symptom'
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+    delete:
+      operationId: v1_medicalasistant_symptom_destroy
+      description: delete a symptom by id
+      summary: delete Symptom
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Symptom
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/teatmentCategory:
+    get:
+      operationId: v1_medicalasistant_teatmentCategory_list
+      description: List all teatment categories
+      summary: List Teatment Category
+      tags:
+      - Teatment Category
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TeatmentCategory'
+          description: ''
+    post:
+      operationId: v1_medicalasistant_teatmentCategory_create
+      description: Create a new teatment category
+      summary: Create Teatment Category
+      tags:
+      - Teatment Category
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TeatmentCategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TeatmentCategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TeatmentCategory'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeatmentCategory'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/treatment:
+    get:
+      operationId: v1_medicalasistant_treatment_list
+      description: List all treatments
+      summary: List Treatment
+      tags:
+      - Treatment
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Treatment'
+          description: ''
+    post:
+      operationId: v1_medicalasistant_treatment_create
+      description: Create a new treatment
+      summary: Create Treatment
+      tags:
+      - Treatment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Treatment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Treatment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Treatment'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Treatment'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/treatment/{id}:
+    get:
+      operationId: v1_medicalasistant_treatment_retrieve
+      description: Retrieve a treatment by id
+      summary: Retrieve Treatment
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Treatment
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Treatment'
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+    patch:
+      operationId: v1_medicalasistant_treatment_partial_update
+      description: update a treatment by id
+      summary: update Treatment
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Treatment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedTreatment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedTreatment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedTreatment'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Treatment'
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+    delete:
+      operationId: v1_medicalasistant_treatment_destroy
+      description: delete a treatment by id
+      summary: delete Treatment
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Treatment
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/medicalasistant/treatmentCategory/{id}:
+    patch:
+      operationId: v1_medicalasistant_treatmentCategory_partial_update
+      description: update a teatment category by id
+      summary: update Teatment Category
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Teatment Category
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedTeatmentCategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedTeatmentCategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedTeatmentCategory'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeatmentCategory'
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+    delete:
+      operationId: v1_medicalasistant_treatmentCategory_destroy
+      description: delete a teatment category by id
+      summary: delete Teatment Category
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - Teatment Category
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+                description: Unspecified response body
+          description: ''
+  /api/v1/schema/:
+    get:
+      operationId: v1_schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - af
+          - ar
+          - ar-dz
+          - ast
+          - az
+          - be
+          - bg
+          - bn
+          - br
+          - bs
+          - ca
+          - ckb
+          - cs
+          - cy
+          - da
+          - de
+          - dsb
+          - el
+          - en
+          - en-au
+          - en-gb
+          - eo
+          - es
+          - es-ar
+          - es-co
+          - es-mx
+          - es-ni
+          - es-ve
+          - et
+          - eu
+          - fa
+          - fi
+          - fr
+          - fy
+          - ga
+          - gd
+          - gl
+          - he
+          - hi
+          - hr
+          - hsb
+          - hu
+          - hy
+          - ia
+          - id
+          - ig
+          - io
+          - is
+          - it
+          - ja
+          - ka
+          - kab
+          - kk
+          - km
+          - kn
+          - ko
+          - ky
+          - lb
+          - lt
+          - lv
+          - mk
+          - ml
+          - mn
+          - mr
+          - ms
+          - my
+          - nb
+          - ne
+          - nl
+          - nn
+          - os
+          - pa
+          - pl
+          - pt
+          - pt-br
+          - ro
+          - ru
+          - sk
+          - sl
+          - sq
+          - sr
+          - sr-latn
+          - sv
+          - sw
+          - ta
+          - te
+          - tg
+          - th
+          - tk
+          - tr
+          - tt
+          - udm
+          - ug
+          - uk
+          - ur
+          - uz
+          - vi
+          - zh-hans
+          - zh-hant
+      tags:
+      - v1
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v2/medicalasistant/Like:
+    get:
+      operationId: v2_medicalasistant_Like_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedLikeList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_Like_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Like'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Like'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Like'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Like'
+          description: ''
+  /api/v2/medicalasistant/case:
+    get:
+      operationId: v2_medicalasistant_case_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCaseList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_case_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Case'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Case'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Case'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Case'
+          description: ''
+  /api/v2/medicalasistant/case/{id}:
+    get:
+      operationId: v2_medicalasistant_case_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Case'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_case_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Case'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Case'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Case'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Case'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_case_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/comment:
+    get:
+      operationId: v2_medicalasistant_comment_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCommentList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_comment_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Comment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Comment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Comment'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Comment'
+          description: ''
+  /api/v2/medicalasistant/comment/{id}:
+    get:
+      operationId: v2_medicalasistant_comment_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Comment'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_comment_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Comment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Comment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Comment'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Comment'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_comment_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/community:
+    get:
+      operationId: v2_medicalasistant_community_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCommunityList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_community_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Community'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Community'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Community'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Community'
+          description: ''
+  /api/v2/medicalasistant/community/{id}:
+    get:
+      operationId: v2_medicalasistant_community_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Community'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_community_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Community'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Community'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Community'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Community'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_community_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/differential-diagnosis:
+    get:
+      operationId: v2_medicalasistant_differential_diagnosis_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDiseasePreventionList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_differential_diagnosis_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DiseasePrevention'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DiseasePrevention'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DiseasePrevention'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiseasePrevention'
+          description: ''
+  /api/v2/medicalasistant/differential-diagnosis-category:
+    get:
+      operationId: v2_medicalasistant_differential_diagnosis_category_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDifferentialDiagnosisCategoryList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_differential_diagnosis_category_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+          description: ''
+  /api/v2/medicalasistant/differential-diagnosis-category/{id}:
+    get:
+      operationId: v2_medicalasistant_differential_diagnosis_category_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_differential_diagnosis_category_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_differential_diagnosis_category_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/differential-diagnosis/{id}:
+    get:
+      operationId: v2_medicalasistant_differential_diagnosis_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DifferentialDiagnosis'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_differential_diagnosis_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DifferentialDiagnosis'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DifferentialDiagnosis'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DifferentialDiagnosis'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DifferentialDiagnosis'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_differential_diagnosis_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/disease:
+    get:
+      operationId: v2_medicalasistant_disease_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDiseaseList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_disease_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Disease'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Disease'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Disease'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Disease'
+          description: ''
+  /api/v2/medicalasistant/disease-prevention:
+    get:
+      operationId: v2_medicalasistant_disease_prevention_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDiseasePreventionList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_disease_prevention_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DiseasePrevention'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DiseasePrevention'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DiseasePrevention'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiseasePrevention'
+          description: ''
+  /api/v2/medicalasistant/disease-prevention/{id}:
+    get:
+      operationId: v2_medicalasistant_disease_prevention_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiseasePrevention'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_disease_prevention_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DiseasePrevention'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DiseasePrevention'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DiseasePrevention'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiseasePrevention'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_disease_prevention_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/disease/{id}:
+    get:
+      operationId: v2_medicalasistant_disease_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Disease'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_disease_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Disease'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Disease'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Disease'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Disease'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_disease_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/doctor-profile:
+    get:
+      operationId: v2_medicalasistant_doctor_profile_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDoctorProfileList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_doctor_profile_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DoctorProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DoctorProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DoctorProfile'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DoctorProfile'
+          description: ''
+  /api/v2/medicalasistant/doctor-profile/{id}:
+    get:
+      operationId: v2_medicalasistant_doctor_profile_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DoctorProfile'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_doctor_profile_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DoctorProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/DoctorProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/DoctorProfile'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DoctorProfile'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_doctor_profile_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/hospital:
+    get:
+      operationId: v2_medicalasistant_hospital_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedHospitalList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_hospital_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Hospital'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Hospital'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Hospital'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hospital'
+          description: ''
+  /api/v2/medicalasistant/hospital/{id}:
+    get:
+      operationId: v2_medicalasistant_hospital_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hospital'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_hospital_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Hospital'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Hospital'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Hospital'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hospital'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_hospital_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/investigation:
+    get:
+      operationId: v2_medicalasistant_investigation_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedInvestigationList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_investigation_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Investigation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Investigation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Investigation'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Investigation'
+          description: ''
+  /api/v2/medicalasistant/investigation/{id}:
+    get:
+      operationId: v2_medicalasistant_investigation_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Investigation'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_investigation_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Investigation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Investigation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Investigation'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Investigation'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_investigation_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/like/{id}:
+    get:
+      operationId: v2_medicalasistant_like_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Like'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_like_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Like'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Like'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Like'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Like'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_like_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/message:
+    get:
+      operationId: v2_medicalasistant_message_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedMessageList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_message_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Message'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Message'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Message'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+          description: ''
+  /api/v2/medicalasistant/message/{id}:
+    get:
+      operationId: v2_medicalasistant_message_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_message_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Message'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Message'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Message'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_message_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/model-training-result:
+    get:
+      operationId: v2_medicalasistant_model_training_result_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedModelTrainingResultList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_model_training_result_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelTrainingResult'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ModelTrainingResult'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ModelTrainingResult'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelTrainingResult'
+          description: ''
+  /api/v2/medicalasistant/model-training-result/{id}:
+    get:
+      operationId: v2_medicalasistant_model_training_result_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelTrainingResult'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_model_training_result_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelTrainingResult'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ModelTrainingResult'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ModelTrainingResult'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelTrainingResult'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_model_training_result_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/occupation:
+    get:
+      operationId: v2_medicalasistant_occupation_list
+      description: List all Occupations
+      summary: List all Occupations
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - Occupation
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedOccupationList'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+    post:
+      operationId: v2_medicalasistant_occupation_create
+      description: Create Occupation
+      summary: Create Occupation
+      tags: Occupation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Occupation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Occupation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Occupation'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Occupation'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+  /api/v2/medicalasistant/occupation/{id}:
+    get:
+      operationId: v2_medicalasistant_occupation_retrieve
+      description: Retrieve Occupation by using id
+      summary: Retrieve Occupation
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags: Occupation
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Occupation'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+    put:
+      operationId: v2_medicalasistant_occupation_update
+      description: updating ocupation by id
+      summary: update ocupation by using id
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags: Occupation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Occupation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Occupation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Occupation'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Occupation'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_occupation_destroy
+      description: deleting ocupation by id
+      summary: delete ocupation by using id
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags: Occupation
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Occupation'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+  /api/v2/medicalasistant/pharmacological-treatment:
+    get:
+      operationId: v2_medicalasistant_pharmacological_treatment_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPharmacologicalTreatmentList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_pharmacological_treatment_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PharmacologicalTreatment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PharmacologicalTreatment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PharmacologicalTreatment'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PharmacologicalTreatment'
+          description: ''
+  /api/v2/medicalasistant/pharmacological-treatment/{id}:
+    get:
+      operationId: v2_medicalasistant_pharmacological_treatment_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PharmacologicalTreatment'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_pharmacological_treatment_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PharmacologicalTreatment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PharmacologicalTreatment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PharmacologicalTreatment'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PharmacologicalTreatment'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_pharmacological_treatment_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/post:
+    get:
+      operationId: v2_medicalasistant_post_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPostList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_post_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Post'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Post'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+          description: ''
+  /api/v2/medicalasistant/post/{id}:
+    get:
+      operationId: v2_medicalasistant_post_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_post_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Post'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Post'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_post_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/prescription:
+    get:
+      operationId: v2_medicalasistant_prescription_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDrugstoreList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_prescription_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Drugstore'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Drugstore'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Drugstore'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Drugstore'
+          description: ''
+  /api/v2/medicalasistant/prescription/{id}:
+    get:
+      operationId: v2_medicalasistant_prescription_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Drugstore'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_prescription_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Drugstore'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Drugstore'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Drugstore'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Drugstore'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_prescription_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/resource:
+    get:
+      operationId: v2_medicalasistant_resource_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedResourceList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_resource_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resource'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Resource'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Resource'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+          description: ''
+  /api/v2/medicalasistant/resource/{id}:
+    get:
+      operationId: v2_medicalasistant_resource_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_resource_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resource'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Resource'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Resource'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_resource_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/speciality:
+    get:
+      operationId: v2_medicalasistant_speciality_list
+      description: List all Specialities
+      summary: List all Specialities
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - Speciality
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSpecialityList'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+    post:
+      operationId: v2_medicalasistant_speciality_create
+      description: Create Speciality
+      summary: Create Speciality
+      tags: Speciality
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Speciality'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Speciality'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Speciality'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Speciality'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+  /api/v2/medicalasistant/speciality/{id}:
+    get:
+      operationId: v2_medicalasistant_speciality_retrieve
+      description: Retrieve Speciality by using id
+      summary: Retrieve Speciality
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags: Speciality
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Speciality'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+    put:
+      operationId: v2_medicalasistant_speciality_update
+      description: Retrieve Speciality by using id
+      summary: Retrieve Speciality
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags: Speciality
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Speciality'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Speciality'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Speciality'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Speciality'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_speciality_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/symptom:
+    get:
+      operationId: v2_medicalasistant_symptom_list
+      description: List all Symptoms
+      summary: List all Symptoms
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - Symptom
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSymptomList'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+    post:
+      operationId: v2_medicalasistant_symptom_create
+      description: Create Symptom
+      summary: Create Symptom
+      tags: Symptom
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Symptom'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Symptom'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Symptom'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Symptom'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+  /api/v2/medicalasistant/symptom/{id}:
+    get:
+      operationId: v2_medicalasistant_symptom_retrieve
+      description: Retrieve Symptom by using id
+      summary: Retrieve Symptom
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags: Symptom
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Symptom'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+    put:
+      operationId: v2_medicalasistant_symptom_update
+      description: updating symptom by id
+      summary: update symptom by using id
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags: Symptom
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Symptom'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Symptom'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Symptom'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Symptom'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_symptom_destroy
+      description: deleting symptom by id
+      summary: delete symptom by using id
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags: Symptom
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Symptom'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                message: Permission denied
+          description: ''
+  /api/v2/medicalasistant/treatment:
+    get:
+      operationId: v2_medicalasistant_treatment_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedTreatmentList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_treatment_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Treatment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Treatment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Treatment'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Treatment'
+          description: ''
+  /api/v2/medicalasistant/treatment-category:
+    get:
+      operationId: v2_medicalasistant_treatment_category_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedTeatmentCategoryList'
+          description: ''
+    post:
+      operationId: v2_medicalasistant_treatment_category_create
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TeatmentCategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TeatmentCategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TeatmentCategory'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeatmentCategory'
+          description: ''
+  /api/v2/medicalasistant/treatment-category/{id}:
+    get:
+      operationId: v2_medicalasistant_treatment_category_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeatmentCategory'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_treatment_category_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TeatmentCategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TeatmentCategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TeatmentCategory'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeatmentCategory'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_treatment_category_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v2/medicalasistant/treatment/{id}:
+    get:
+      operationId: v2_medicalasistant_treatment_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Treatment'
+          description: ''
+    put:
+      operationId: v2_medicalasistant_treatment_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Treatment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Treatment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Treatment'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Treatment'
+          description: ''
+    delete:
+      operationId: v2_medicalasistant_treatment_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - v2
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    BlankEnum:
+      enum:
+      - ''
+    Case:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        patient_hpi: {}
+        physical_examination: {}
+        age:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        body_temperature:
+          type: number
+          format: double
+        spo2:
+          type: number
+          format: double
+        occupation:
+          type: string
+          maxLength: 50
+        normal_pulse:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        systolic_blood_pressure:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        diastolic_blood_pressure:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        bmi:
+          type: number
+          format: double
+        location:
+          type: string
+          maxLength: 50
+        gender:
+          type: string
+          maxLength: 50
+        target_group:
+          type: string
+          maxLength: 50
+        respiratory_rate:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        treatment:
+          nullable: true
+        outcome:
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        diisease_id:
+          type: string
+          format: uuid
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - age
+      - bmi
+      - body_temperature
+      - created_at
+      - diastolic_blood_pressure
+      - gender
+      - id
+      - location
+      - normal_pulse
+      - occupation
+      - patient_hpi
+      - physical_examination
+      - respiratory_rate
+      - spo2
+      - systolic_blood_pressure
+      - target_group
+      - updated_at
+    Comment:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        content:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        post:
+          type: string
+          format: uuid
+          nullable: true
+        user:
+          type: string
+          format: uuid
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - updated_at
+    Community:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 50
+        description:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        deleted_at:
+          type: string
+          format: date-time
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - name
+      - updated_at
+    DifferentialDiagnosis:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        category:
+          type: string
+          format: uuid
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+      required:
+      - created_at
+      - id
+      - name
+      - updated_at
+      - updated_by
+    DifferentialDiagnosisCategory:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+      required:
+      - created_at
+      - id
+      - name
+      - updated_at
+      - updated_by
+    Disease:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        machine_learning_value:
+          type: string
+          nullable: true
+          maxLength: 255
+        occupation:
+          nullable: true
+        referal_conditions:
+          nullable: true
+        causes:
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+        symptoms:
+          type: array
+          items:
+            type: string
+            format: uuid
+        differential_diagnosis:
+          type: array
+          items:
+            type: string
+            format: uuid
+        investigations:
+          type: array
+          items:
+            type: string
+            format: uuid
+        prevention:
+          type: array
+          items:
+            type: string
+            format: uuid
+        pharmacological_treatment:
+          type: array
+          items:
+            type: string
+            format: uuid
+        treatment:
+          type: array
+          items:
+            type: string
+            format: uuid
+      required:
+      - created_at
+      - differential_diagnosis
+      - id
+      - investigations
+      - name
+      - pharmacological_treatment
+      - prevention
+      - symptoms
+      - treatment
+      - updated_at
+    DiseasePrevention:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - name
+      - updated_at
+    DoctorProfile:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        password:
+          type: string
+          maxLength: 128
+        last_login:
+          type: string
+          format: date-time
+          nullable: true
+        is_superuser:
+          type: boolean
+          title: Superuser status
+          description: Designates that this user has all permissions without explicitly
+            assigning them.
+        username:
+          type: string
+          description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+            only.
+          pattern: ^[\w.@+-]+$
+          maxLength: 150
+        first_name:
+          type: string
+          maxLength: 150
+        last_name:
+          type: string
+          maxLength: 150
+        email:
+          type: string
+          format: email
+          title: Email address
+          maxLength: 254
+        is_staff:
+          type: boolean
+          title: Staff status
+          description: Designates whether the user can log into this admin site.
+        is_active:
+          type: boolean
+          title: Active
+          description: Designates whether this user should be treated as active. Unselect
+            this instead of deleting accounts.
+        date_joined:
+          type: string
+          format: date-time
+        phone_number:
+          type: string
+          maxLength: 20
+        date_birth:
+          type: string
+          format: date
+          nullable: true
+        profile:
+          type: string
+          format: uri
+          nullable: true
+        gender:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/GenderEnum'
+          - $ref: '#/components/schemas/BlankEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        latitude:
+          type: number
+          format: double
+          nullable: true
+        address:
+          type: string
+          maxLength: 50
+        verification_status:
+          type: boolean
+        profile_picture:
+          type: string
+          format: uri
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        occupation:
+          type: string
+          format: uuid
+          nullable: true
+        speciality:
+          type: string
+          format: uuid
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+        groups:
+          type: array
+          items:
+            type: integer
+          description: The groups this user belongs to. A user will get all permissions
+            granted to each of their groups.
+        user_permissions:
+          type: array
+          items:
+            type: integer
+          description: Specific permissions for this user.
+        hospital:
+          type: array
+          items:
+            type: string
+            format: uuid
+        community:
+          type: array
+          items:
+            type: string
+            format: uuid
+      required:
+      - address
+      - community
+      - created_at
+      - hospital
+      - id
+      - password
+      - phone_number
+      - speciality
+      - updated_at
+      - username
+    Drugstore:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        usage_form_and_strength:
+          type: string
+          nullable: true
+        level:
+          $ref: '#/components/schemas/LevelEnum'
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - level
+      - name
+      - updated_at
+    GenderEnum:
+      enum:
+      - Male
+      - Female
+      - Other
+      type: string
+      description: |-
+        * `Male` - Male
+        * `Female` - Female
+        * `Other` - Other
+    Hospital:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 50
+        location:
+          type: string
+          maxLength: 50
+        description:
+          type: string
+          nullable: true
+        phone_number:
+          type: string
+          maxLength: 20
+        level:
+          $ref: '#/components/schemas/LevelEnum'
+        icon:
+          type: string
+          format: uri
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        deleted_at:
+          type: string
+          format: date-time
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - level
+      - location
+      - name
+      - phone_number
+      - updated_at
+    Investigation:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - created_at
+      - id
+      - name
+      - updated_at
+    LevelEnum:
+      enum:
+      - A
+      - B
+      - C
+      - D
+      - S
+      type: string
+      description: |-
+        * `A` - A
+        * `B` - B
+        * `C` - C
+        * `D` - D
+        * `S` - S
+    Like:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        user_id:
+          type: string
+          format: uuid
+          nullable: true
+        post_id:
+          type: string
+          format: uuid
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - updated_at
+    Message:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        content:
+          type: string
+          nullable: true
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+        is_read:
+          type: boolean
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        sender:
+          type: string
+          format: uuid
+          nullable: true
+        receiver:
+          type: string
+          format: uuid
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+        deleted_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - updated_at
+    ModelTrainingResult:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        model_name:
+          type: string
+          maxLength: 255
+        model_file:
+          type: string
+          format: uri
+          nullable: true
+        accuracy:
+          type: number
+          format: double
+          nullable: true
+        precision:
+          type: number
+          format: double
+          nullable: true
+        recall:
+          type: number
+          format: double
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - created_at
+      - id
+      - model_name
+      - updated_at
+    NullEnum:
+      enum:
+      - null
+    Occupation:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        machine_learning_value:
+          type: string
+          nullable: true
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - created_at
+      - id
+      - name
+      - updated_at
+    PaginatedCaseList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Case'
+    PaginatedCommentList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Comment'
+    PaginatedCommunityList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Community'
+    PaginatedDifferentialDiagnosisCategoryList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/DifferentialDiagnosisCategory'
+    PaginatedDiseaseList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Disease'
+    PaginatedDiseasePreventionList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/DiseasePrevention'
+    PaginatedDoctorProfileList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/DoctorProfile'
+    PaginatedDrugstoreList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Drugstore'
+    PaginatedHospitalList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Hospital'
+    PaginatedInvestigationList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Investigation'
+    PaginatedLikeList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Like'
+    PaginatedMessageList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Message'
+    PaginatedModelTrainingResultList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ModelTrainingResult'
+    PaginatedOccupationList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Occupation'
+    PaginatedPharmacologicalTreatmentList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/PharmacologicalTreatment'
+    PaginatedPostList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Post'
+    PaginatedResourceList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Resource'
+    PaginatedSpecialityList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Speciality'
+    PaginatedSymptomList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Symptom'
+    PaginatedTeatmentCategoryList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/TeatmentCategory'
+    PaginatedTreatmentList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Treatment'
+    PatchedDisease:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        machine_learning_value:
+          type: string
+          nullable: true
+          maxLength: 255
+        occupation:
+          nullable: true
+        referal_conditions:
+          nullable: true
+        causes:
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+        symptoms:
+          type: array
+          items:
+            type: string
+            format: uuid
+        differential_diagnosis:
+          type: array
+          items:
+            type: string
+            format: uuid
+        investigations:
+          type: array
+          items:
+            type: string
+            format: uuid
+        prevention:
+          type: array
+          items:
+            type: string
+            format: uuid
+        pharmacological_treatment:
+          type: array
+          items:
+            type: string
+            format: uuid
+        treatment:
+          type: array
+          items:
+            type: string
+            format: uuid
+    PatchedOccupation:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        machine_learning_value:
+          type: string
+          nullable: true
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+    PatchedSpeciality:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        description:
+          type: string
+          nullable: true
+        name:
+          type: string
+          maxLength: 50
+        level:
+          $ref: '#/components/schemas/LevelEnum'
+        icon:
+          type: string
+          format: uri
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        deleted_at:
+          type: string
+          format: date-time
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+    PatchedSymptom:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        machine_learning_value:
+          type: string
+          nullable: true
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+    PatchedTeatmentCategory:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        machine_learning_value:
+          type: string
+          nullable: true
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+    PatchedTreatment:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        treatment_category:
+          type: string
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+    PharmacologicalTreatment:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        usage_form:
+          type: string
+          maxLength: 255
+        weight:
+          type: string
+          maxLength: 50
+        dose_unit:
+          type: string
+          maxLength: 255
+        dose_time:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        dose_time_unit:
+          type: string
+          maxLength: 255
+        total_duration:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        total_duration_unit:
+          type: string
+          maxLength: 255
+        condition:
+          type: string
+          maxLength: 255
+        allowed_group:
+          nullable: true
+        warnings:
+          type: string
+          nullable: true
+        alternative_drug:
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        drugs:
+          type: string
+          format: uuid
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - condition
+      - created_at
+      - dose_time_unit
+      - dose_unit
+      - drugs
+      - id
+      - total_duration_unit
+      - updated_at
+      - weight
+    Post:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        title:
+          type: string
+          maxLength: 50
+        content:
+          type: string
+          nullable: true
+        tags:
+          nullable: true
+        image:
+          type: string
+          format: uri
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        user:
+          type: string
+          format: uuid
+          nullable: true
+        community:
+          type: string
+          format: uuid
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - title
+      - updated_at
+    Resource:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        title:
+          type: string
+          maxLength: 50
+        description:
+          type: string
+          nullable: true
+        file_path:
+          type: string
+          format: uri
+          nullable: true
+        link:
+          type: string
+          nullable: true
+          maxLength: 50
+        resource_type:
+          type: string
+          nullable: true
+          maxLength: 50
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - title
+      - updated_at
+    Speciality:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        description:
+          type: string
+          nullable: true
+        name:
+          type: string
+          maxLength: 50
+        level:
+          $ref: '#/components/schemas/LevelEnum'
+        icon:
+          type: string
+          format: uri
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        deleted_at:
+          type: string
+          format: date-time
+          nullable: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - level
+      - name
+      - updated_at
+    StatusEnum:
+      enum:
+      - active
+      - ongoing
+      - completed
+      - cancelled
+      type: string
+      description: |-
+        * `active` - active
+        * `ongoing` - ongoing
+        * `completed` - completed
+        * `cancelled` - cancelled
+    Symptom:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        machine_learning_value:
+          type: string
+          nullable: true
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - name
+      - updated_at
+    TeatmentCategory:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        machine_learning_value:
+          type: string
+          nullable: true
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - name
+      - updated_at
+    Treatment:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        treatment_category:
+          type: string
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: string
+          format: uuid
+          nullable: true
+        updated_by:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - created_at
+      - id
+      - name
+      - treatment_category
+      - updated_at
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid

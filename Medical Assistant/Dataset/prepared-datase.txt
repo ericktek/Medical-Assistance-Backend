@@ -1,0 +1,35 @@
+### Iron Deficiency Anemia:
+
+| **Disease**                       | Iron Deficiency Anemia                                                           |
+|-----------------------------------|-----------------------------------------------------------------------------------|
+| **Category**                      | Nutritional Deficiency Anemia                                                    |
+| **Causes**                        | Nutritional deficiency, chronic blood loss, malabsorption, hookworm infestations, increased demand (e.g., during pregnancy) |
+| **Category of People at Risk**    | - Individuals with poor dietary intake <br>- Pregnant women <br>- Those with chronic blood loss or malabsorption issues |
+| **Clinical Presentation**         | Fatigue, Palpitation, Dizziness, Glossitis, Koilonychias, Pica                   |
+| **Investigations**                | FBP, Peripheral smear, Iron studies (serum iron levels, total iron binding capacity, serum ferritin), Stool analysis for hookworm ova and occult blood |
+| **Non-Pharmacological Treatment** | - Consume a variety of iron-rich foods <br>- Avoid tea/coffee with meals <br>- Increase intake of vitamin C rich foods |
+| **Pharmacological Treatment**     | - Ferrous sulfate (PO) 200mg 8 hourly for 3 months (Adults) <br>- Ferrous sulfate (PO) 5mg/kg 8 hourly for 3 months (Children) <br>- Blood transfusion (if life-threatening) <br>- Iron sucrose (IV) for those unable to tolerate oral iron |
+| **Other Treatment**               | Formulations of iron combined with other nutritional supplements (vitamins, folic acid, zinc, and amino acids) are recommended to enhance absorption of iron and correct combined nutritional deficiencies |
+
+### Megaloblastic Anemia:
+
+| **Disease**                       | Megaloblastic Anemia                                                              |
+|-----------------------------------|-----------------------------------------------------------------------------------|
+| **Category**                      | Macrocytic Anemia                                                                 |
+| **Causes**                        | Inadequate intake or malabsorption of vitamin B12 or folate                       |
+| **Category of People at Risk**    | - Individuals with poor dietary intake or malabsorption issues                    |
+| **Clinical Presentation**         | Pallor, Depression, Hair loss, Pins and needles, Numbness, Tremors, Jaundice, Beefy tongue, Darkening of palms, Ataxic gait |
+| **Investigations**                | FBC, Peripheral smear, Serum vitamin B12, Serum folate level, TSH, Reticulocyte count, Bone marrow aspiration (if indicated) |
+| **Pharmacological Treatment**     | - Hydroxycobalamin (IM) for B12 deficiency <br>- Folic acid (PO) for at least 3 months <br>- Ferrous sulfate (PO) for at least 3 months |
+| **Other Treatment**               | - Concurrent treatment with folic acid and iron sulfate |
+
+### Haemolytic Anemia:
+
+| **Disease**                       | Haemolytic Anemia                                                                |
+|-----------------------------------|-----------------------------------------------------------------------------------|
+| **Category**                      | Hemolytic Disorder                                                               |
+| **Causes**                        | Increased rate of red cell destruction in the intravascular or reticuloendothelial system in some pathological disorders |
+| **Category of People at Risk**    | Individuals with underlying conditions leading to increased red cell destruction |
+| **Clinical Presentation**         | Pallor, Jaundice, Splenomegaly, Anaemia, Reticulocytosis, Indirect hyperbilirubinemia, Haemoglobinuria |
+| **Pharmacological Treatment**     | - Immunosuppressants (Prednisolone or Cyclophosphamide) <br>- Folic acid (if no response) <br>- Blood transfusion (if severe) <br>- High-dose human immunoglobulin G (if no response) |
+| **Surgical Management**           | Splenectomy (considered if no response to pharmacological treatment)              |

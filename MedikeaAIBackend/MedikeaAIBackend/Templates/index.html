@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Assistant System</title>
+    <link rel="stylesheet" href="{% static 'assets/stlye.css' %}">
+    </header>
+    <div class="container">
+        {% if disease %}
+        <h1>Resuults obtained from medical assistant system</h1>
+        <h2>Main Disease:</h2>{% if disease.differential %} {% for dis in disease.main %} {{dis}} , {% endfor %} {% endif %}
+        <h2>Asssociated Disease:</h2>{% if disease.differential %} {% for dis in disease.differential %} {{dis}} , {% endfor %} {% endif %}
+        <!-- <p id="results" data-value="{{disease}}"> {{disease}}</p> -->
+        {% endif %}
+    </div>
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Assistant System</h1>
+        <p>Please fill in the following information:</p>
+        
+        <form method="post">
+            {% csrf_token %}
+                <section>
+                <h2>Patient HPI History:</h2>
+                <label for="main_symptoms">Main Symptoms:</label>
+                <input type="text" name="main_symptoms" id="main_symptoms" placeholder="eg. cough, fever, headache, etc.">
+                <br>
+                <label for="associated_symptoms">Associated Symptoms:</label>
+                <input type="text" name="associated_symptoms"  id="associated_symptoms" placeholder="eg. cough, fever, headache, etc.">
+                <br>
+                <label for="additional_info">Additional Information:</label>
+                <input type="text" name="additional_info" id="additional_info" placeholder="The patient has a history of travel to malaria-endemic regions.">
+            </section>
+    
+            <section>
+                <h2>Patient Physical Examination:</h2>
+                <label for="general_exam">General Examination:</label>
+                <textarea name="general_exam" cols="30" rows="10" placeholder="The patient appears uncomfortable and is in mild distress."></textarea>
+                <br>
+                <label for="abdominal_exam">Abdominal Examination:</label>
+                <textarea name="abdominal_exam" cols="30" value ="Null" rows="10" placeholder="Abdomen is soft and non-tender to palpation"></textarea>
+                <br>
+                <label for="neurological_exam">Neurological Examination:</label>
+                <textarea name="neurological_exam" cols="30" value ="Null" rows="10" placeholder="Mental status: The patient is alert and oriented to person, place, and time"></textarea>
+                <br>
+                <label for="other_finding">Other Findings:</label>
+                <textarea name="other_finding"  cols="30" rows="10" value ="Null" placeholder="Respiratory: Clear breath sounds bilaterally, no wheezing or crackles."></textarea>
+            </section>
+    
+            <section>
+                <h2>Patient Details:</h2>
+                <label for="Age">Age:</label>
+                <input type="number" name="Age" placeholder="30">
+                <br>
+                <label for="BodyTemperature">Body Temperature:</label>
+                <input type="text" name="BodyTemperature" value = "37.5" placeholder="37.5 °C">
+                <br>
+                <label for="NormalPulse">Normal Pulse:</label>
+                <input type="number" name="NormalPulse" value ="70" placeholder="70">
+                <br>
+                <label for="RespiratoryRate">Respiratory Rate:</label>
+                <input type="number" name="RespiratoryRate" value="96" placeholder="1OO bpm">
+                <br>
+                <label for="Occupation">Occupation:</label>
+                <input type="text" name="Occupation" placeholder="Student"">
+                <br>
+                <label for="Location">Location:</label>
+                <input type="text" name="Location" value= "Dar es salaam" placeholder="Nairobi">
+                <br>
+                <label for="SystolicBloodPressure">Systolic Blood Pressure:</label>
+                <input type="number" name="SystolicBloodPressure" value= "120" placeholder="120 mm Hg">
+                <br>
+                <label for="DiastolicBloodPressure">Diastolic Blood Pressure:</label>
+                <input type="number" name="DiastolicBloodPressure" value = "80" placeholder="80 mm Hg">
+                <br>
+                <label for="heights">heights:</label>
+                <input type="number" name="heights" placeholder="170 cm">
+                <br>
+                <label for="weights">weights:</label>
+                <input type="number" name="weights" placeholder="60 kg" >
+                <br>
+                <label for="TargetGroup">Target Group:</label>
+                <input type="text" name="TargetGroup" placeholder="Adult">
+                <br>
+                <label for="Gender">Gender:</label>
+                <select name="Gender" id="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <br>
+            </section>
+    
+            <input type="submit" class="btn" value="Submit">
+        </form>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    <!-- const results = document.getElementById('results');
+    const value = results.getAttribute('data-value');
+
+    // Check if value exists and marked.js is loaded before processing
+    if (value && window.marked) {
+        const htmlContent = marked(value);
+        results.innerHTML = htmlContent;
+    } else {
+        console.warn("Markdown processing failed: Missing value or marked.js library");
+    } -->
+</script>
+</html>
+

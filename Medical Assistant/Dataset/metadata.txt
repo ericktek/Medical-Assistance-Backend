@@ -1,0 +1,104 @@
+| Disease                                       | Age Range    | Occupation Most Affected      | Environmental Condition       | Gender  | Region Case Study     | Latitude   | Longitude   |
+|-----------------------------------------------|--------------|-------------------------------|-------------------------------|---------|------------------------|------------|-------------|
+| Whooping Cough                                | 1-5 years    | Pediatricians                 | Respiratory Infections        | Any     | Arusha                 | -3.3869    | 36.6825     |
+| Bronchiectasis                                | 30-70 years  | Factory Workers               | Chronic Respiratory Infections | Any  | Mwanza                 | -2.5167    | 32.9000     |
+| Lung Abscess                                  | 40-80 years  | Smokers                       | Aspiration Pneumonia          | Any     | Kilimanjaro            | -3.0674    | 37.3556     |
+| Aspergillosis                                 | 20-60 years  | Farmers                       | Inhalation of Aspergillus Spores | Any | Morogoro               | -6.8222    | 37.6611     |
+| Influenza                                     | 1-80 years   | Healthcare Workers            | Seasonal Viral Infections     | Any     | Tanga                  | -5.0689    | 39.0988     |
+| Hypertension                                  | 30-80 years  | Sedentary Office Workers      | Unhealthy Lifestyle Choices   | Any     | Zanzibar               | -6.1651    | 39.1980     |
+| Diabetes Mellitus                             | 20-80 years  | Obese Individuals             | Genetic and Lifestyle Factors | Any | Iringa                 | -7.7694    | 35.6922     |
+| COVID-19                                      | 1-80 years   | Healthcare Workers            | Airborne Transmission         | Any     | Pwani                  | -6.7242    | 38.2794     |
+| Migraine                                      | 15-60 years  | Office Workers                | Genetic Predisposition        | Any     | Kagera                 | -1.2921    | 31.8111     |
+| Osteoarthritis                                | 40-80 years  | Elderly Individuals           | Wear and Tear of Joints       | Any     | Rukwa                  | -7.0086    | 31.4229     |
+| Hepatitis B                                   | 20-60 years  | Healthcare Workers            | Bloodborne Transmission       | Any     | Manyara                | -4.2260    | 35.7516     |
+| Hepatitis C                                   | 20-60 years  | Intravenous Drug Users        | Bloodborne Transmission       | Any     | Singida                | -4.8176    | 34.7509     |
+| Hepatitis D                                   | 20-60 years  | Individuals with Hepatitis B  | Coinfection                   | Any     | Shinyanga              | -3.6639    | 33.4212     |
+| Hepatitis E                                   | 20-60 years  | Contaminated Water Consumers  | Waterborne Transmission       | Any     | Lindi                  | -10.0028   | 39.7064     |
+| Portal Hypertension                           | 30-80 years  | Individuals with Cirrhosis    | Liver Disease Complications   | Any     | Mara                   | -1.9966    | 34.9625     |
+| Ascites                                       | 30-80 years  | Individuals with Liver Disease | Liver Dysfunction            | Any     | Tabora                 | -5.0169    | 32.8261     |
+| Spontaneous Bacterial Peritonitis             | 30-80 years  | Individuals with Liver Disease | Bacterial Infections          | Any     | Katavi                 | -6.9826    | 31.5889     |
+| Bleeding Esophageal Varices                  | 30-80 years  | Individuals with Liver Disease | Ruptured Varices              | Any     | Geita                 | -2.8656    | 30.9658     |
+| Hepatic Encephalopathy                        | 30-80 years  | Individuals with Liver Disease | Ammonia Buildup               | Any     | Njombe                 | -9.3250    | 34.7700     |
+| Epilepsy                               | 5-60 years   | Teachers                      | Genetic Factors               | Any     | Pwani                  | -6.7242    | 38.2794     |
+| Management of Pediatric CSF Shunt Infections | 0-5 years | Pediatricians                 | Healthcare Settings           | Any     | Kagera                 | -1.2921    | 31.8111     |
+| Congenital Spina Bifida               | 0-2 years    | Parents                       | Genetic Factors               | Any     | Rukwa                  | -7.0086    | 31.4229     |
+| Trigeminal Neuralgia                  | 30-70 years  | Office Workers                | Nerve Compression             | Any     | Manyara                | -4.2260    | 35.7516     |
+| Bell’s Palsy                           | 20-50 years  | Administrative Staff          | Viral Infections              | Any     | Singida                | -4.8176    | 34.7509     |
+| Acute Transverse Myelitis (TM)         | 20-50 years  | IT Professionals              | Autoimmune Disorders          | Any     | Shinyanga              | -3.6639    | 33.4212     |
+| Guillain Barre Syndrome                | 20-60 years  | Engineers                     | Infections (e.g., Campylobacter) | Any  | Lindi                  | -10.0028   | 39.7064     |
+| Peripheral Neuropathy                  | 40-80 years  | Factory Workers               | Diabetes, Alcoholism          | Any     | Mara                   | -1.9966    | 34.9625     |
+| Pneumonia in Adults                    | 20-70 years  | Construction Workers          | Respiratory Infections        | Any     | Tabora                 | -5.0169    | 32.8261     |
+| Pneumonia in Children                  | 1-5 years    | Daycare Workers               | Poor Hygiene                  | Any     | Katavi                 | -6.9826    | 31.5889     |
+| Community-Acquired Pneumonia (CAP)     | 30-70 years  | Retail Workers                | Close Contact with Infected Individuals | Any | Geita                 | -2.8656    | 30.9658     |
+| Hospital-Acquired Pneumonia (HAP)/Nosocomial Pneumonia | 20-80 years | Nurses                 | Hospital Settings             | Any     | Njombe                 | -9.3250    | 34.7700     |
+| Asthma                                 | 5-70 years   | Outdoor Workers               | Environmental Allergens       | Any     | Simiyu                | -2.5183    | 34.8209     |
+| Acute Bronchitis                       | 20-60 years  | Office Workers                | Respiratory Infections        | Any     | Dodoma                 | -6.1630    | 35.7516     |
+| Chronic Bronchitis                     | 40-80 years  | Smokers                       | Long-Term Tobacco Exposure    | Any     | Mtwara                 | -10.2747   | 40.1821     |
+| Emphysema                              | 50-80 years  | Former Smokers                | Long-Term Tobacco Exposure    | Any     | Pemba                  | -5.2322    | 39.7750     |
+| COPD Exacerbation                      | 40-80 years  | Construction Workers          | Air Pollution                 | Any     | Kigoma                 | -4.8794    | 29.6255     |
+| Acute Laryngo-Tracheobronchitis (Croup) | 1-5 years  | Parents                       | Viral Infections              | Any     | Dar es Salaam           | -6.7924    | 39.2083     |
+| Laryngeal Diphtheria                   | 1-10 years   | School Teachers               | Bacterial Infections          | Any     | Mbeya                  | -8.9100    | 33.4700     |
+| Epilepsy                               | 5-60 years   | Teachers                      | Genetic Factors               | Any     | Pwani                  | -6.7242    | 38.2794     |
+| Management of Pediatric CSF Shunt Infections | 0-5 years | Pediatricians                 | Healthcare Settings           | Any     | Kagera                 | -1.2921    | 31.8111     |
+| Congenital Spina Bifida               | 0-2 years    | Parents                       | Genetic Factors               | Any     | Rukwa                  | -7.0086    | 31.4229     |
+| Trigeminal Neuralgia                  | 30-70 years  | Office Workers                | Nerve Compression             | Any     | Manyara                | -4.2260    | 35.7516     |
+| Bell’s Palsy                           | 20-50 years  | Administrative Staff          | Viral Infections              | Any     | Singida                | -4.8176    | 34.7509     |
+| Acute Transverse Myelitis (TM)         | 20-50 years  | IT Professionals              | Autoimmune Disorders          | Any     | Shinyanga              | -3.6639    | 33.4212     |
+| Guillain Barre Syndrome                | 20-60 years  | Engineers                     | Infections (e.g., Campylobacter) | Any  | Lindi                  | -10.0028   | 39.7064     |
+| Peripheral Neuropathy                  | 40-80 years  | Factory Workers               | Diabetes, Alcoholism          | Any     | Mara                   | -1.9966    | 34.9625     |
+| Pneumonia in Adults                    | 20-70 years  | Construction Workers          | Respiratory Infections        | Any     | Tabora                 | -5.0169    | 32.8261     |
+| Pneumonia in Children                  | 1-5 years    | Daycare Workers               | Poor Hygiene                  | Any     | Katavi                 | -6.9826    | 31.5889     |
+| Community-Acquired Pneumonia (CAP)     | 30-70 years  | Retail Workers                | Close Contact with Infected Individuals | Any | Geita                 | -2.8656    | 30.9658     |
+| Hospital-Acquired Pneumonia (HAP)/Nosocomial Pneumonia | 20-80 years | Nurses                 | Hospital Settings             | Any     | Njombe                 | -9.3250    | 34.7700     |
+| Asthma                                 | 5-70 years   | Outdoor Workers               | Environmental Allergens       | Any     | Simiyu                | -2.5183    | 34.8209     |
+| Acute Bronchitis                       | 20-60 years  | Office Workers                | Respiratory Infections        | Any     | Dodoma                 | -6.1630    | 35.7516     |
+| Chronic Bronchitis                     | 40-80 years  | Smokers                       | Long-Term Tobacco Exposure    | Any     | Mtwara                 | -10.2747   | 40.1821     |
+| Emphysema                              | 50-80 years  | Former Smokers                | Long-Term Tobacco Exposure    | Any     | Pemba                  | -5.2322    | 39.7750     |
+| COPD Exacerbation                      | 40-80 years  | Construction Workers          | Air Pollution                 | Any     | Kigoma                 | -4.8794    | 29.6255     |
+| Acute Laryngo-Tracheobronchitis (Croup) | 1-5 years  | Parents                       | Viral Infections              | Any     | Dar es Salaam           | -6.7924    | 39.2083     |
+| Laryngeal Diphtheria                   | 1-10 years   | School Teachers               | Bacterial Infections          | Any     | Mbeya                  | -8.9100    | 33.4700     |
+| Abnormal Uterine Bleeding (AUB)                | 15-50 years  | Women                         | Hormonal Imbalances           | Female | Arusha                 | -3.3869    | 36.6825     |
+| Dysmenorrhea                                  | 15-40 years  | Women                         | Menstrual Pain                | Female | Mwanza                 | -2.5167    | 32.9000     |
+| Endometriosis                                 | 15-50 years  | Women                         | Abnormal Tissue Growth       | Female | Kilimanjaro            | -3.0674    | 37.3556     |
+| Contraception                                 | 15-45 years  | Women                         | Family Planning Methods       | Female | Morogoro               | -6.8222    | 37.6611     |
+| Infertility                                   | 20-40 years  | Men and Women                 | Reproductive Issues           | Any     | Tanga                  | -5.0689    | 39.0988     |
+| Impetigo                                      | 2-12 years   | School-Aged Children          | Bacterial Infection           | Any     | Zanzibar               | -6.1651    | 39.1980     |
+| Folliculitis                                  | 15-40 years  | Individuals with Skin Conditions | Irritated Hair Follicles   | Any     | Iringa                 | -7.7694    | 35.6922     |
+| Abscess                                       | 15-60 years  | Individuals with Poor Immune System | Bacterial Infections     | Any     | Pwani                  | -6.7242    | 38.2794     |
+| Erysipelas and Cellulitis                    | 20-60 years  | Individuals with Skin Infections | Bacterial Infections     | Any     | Kagera                 | -1.2921    | 31.8111     |
+| Paronychia                                    | 15-40 years  | Individuals with Nail Conditions | Bacterial Infections     | Any     | Rukwa                  | -7.0086    | 31.4229     |
+| Tinea Corporis                                | 1-80 years   | Individuals in Crowded Environments | Fungal Infections      | Any     | Manyara                | -4.2260    | 35.7516     |
+| Chromoblastomycosis                          | 20-60 years  | Agricultural Workers          | Fungal Infections              | Any     | Singida                | -4.8176    | 34.7509     |
+| Scabies                                       | 1-80 years   | Crowded Living Conditions     | Mite Infestation               | Any     | Shinyanga              | -3.6639    | 33.4212     |
+| Herpes Simplex                                | 15-60 years  | Individuals with Unsafe Sexual Practices | Viral Infections     | Any     | Lindi                  | -10.0028   | 39.7064     |
+| Chickenpox                                    | 1-20 years   | Children                      | Viral Infections              | Any     | Mara                   | -1.9966    | 34.9625     |
+| Herpes Zoster (Shingles)                      | 40-80 years  | Individuals with Weakened Immune System | Viral Infections     | Any     | Tabora                 | -5.0169    | 32.8261     |
+| Post-herpetic Neuralgia                       | 40-80 years  | Elderly Individuals           | Complication of Shingles      | Any     | Katavi                 | -6.9826    | 31.5889     |
+| Molluscum Contagiosum                         | 1-10 years   | Children                      | Viral Infections              | Any     | Geita                 | -2.8656    | 30.9658     |
+| Viral Warts                                   | 1-80 years   | Individuals with HPV         | Viral Infections              | Any     | Njombe                 | -9.3250    | 34.7700     |
+| Eczema (Dermatitis) Conditions                | 1-80 years   | Individuals with Allergies   | Chronic Skin Conditions       | Any     | Simiyu                | -2.5183    | 34.8209     |
+| Seborrheic Dermatitis                         | 1-80 years   | Individuals with Oily Skin   | Chronic Skin Conditions       | Any     | Dodoma                 | -6.1630    | 35.7516     |
+| Glaucoma                                      | 40-80 years  | Elderly Individuals           | Increased Intraocular Pressure | Any | Mtwara                 | -10.2747   | 40.1821     |
+| Primary Open Angle Glaucoma                   | 40-80 years  | Elderly Individuals           | Increased Intraocular Pressure | Any | Pemba                  | -5.2322    | 39.7750     |
+| Angle Closure Glaucoma                        | 40-80 years  | Elderly Individuals           | Blocked Drainage Angle         | Any     | Kigoma                 | -4.8794    | 29.6255     |
+| Childhood Glaucoma                            | 1-10 years   | Children                      | Congenital Eye Condition      | Any     | Dar es Salaam           | -6.7924    | 39.2083     |
+| Diabetic Retinopathy                          | 20-80 years  | Individuals with Diabetes     | Diabetes Complications        | Any     | Mbeya                  | -8.9100    | 33.4700     |
+| Trachoma                                     | 1-80 years   | Individuals in Poor Hygiene Conditions | Bacterial Infections  | Any     | Dodoma                 | -6.1630    | 35.7516     |
+| Age-Related Macular Degeneration              | 50-80 years  | Elderly Individuals           | Aging Process                 | Any     | Mtwara                 | -10.2747   | 40.1821     |
+| Refractive Errors                             | 1-80 years   | Individuals with Vision Issues | Vision Problems               | Any     | Pemba                  | -5.2322    | 39.7750     |
+| Low Vision                                    | 1-80 years   | Individuals with Vision Issues | Vision Impairment             | Any     | Kigoma                 | -4.8794    | 29.6255     |
+| Painful Red Eyes (Ocular Trauma)              | 1-80 years   | Individuals with Eye Injuries | Trauma to the Eye             | Any     | Dar es Salaam           | -6.7924    | 39.2083     |
+| Herpes Simplex Keratitis                      | 20-60 years  | Individuals with Unsafe Contact Lens Use | Viral Infections    | Any     | Mbeya                  | -8.9100    | 33.4700     |
+| Corneal Ulcer                                 | 1-80 years   | Individuals with Eye Infections | Eye Infections                | Any     | Dodoma                 | -6.1630    | 35.7516     |
+| Uveitis                                      | 20-80 years  | Individuals with Autoimmune Disorders | Autoimmune Disorders | Any     | Mtwara                 | -10.2747   | 40.1821     |
+| Conjunctivitis (Bacterial/Viral)              | 1-80 years   | Individuals in Crowded Environments | Bacterial/Viral Infections  | Any | Pemba                  | -5.2322    | 39.7750     |
+| Bacterial Meningitis                  | 1-10 years   | Students                      | Crowded Living Conditions     | Any     | Dar es Salaam           | -6.7924    | 39.2083     |
+| Tuberculous Meningitis                | 20-60 years  | Healthcare Workers            | Poor Ventilation              | Any     | Mbeya                  | -8.9100    | 33.4700     |
+| Tetanus                                | 15-50 years  | Farmers                       | Contaminated Wounds           | Any     | Dodoma                 | -6.1630    | 35.7516     |
+| Brain Abscess                         | 30-70 years  | IT Professionals              | Post-surgical Complications   | Any     | Arusha                 | -3.3869    | 36.6825     |
+| Cryptococcus Meningitis               | 25-60 years  | HIV+ Individuals              | Weakened Immune System        | Any     | Mwanza                 | -2.5167    | 32.9000     |
+| Toxoplasmosis                         | 1-40 years   | Pregnant Women                | Handling Cat Litter           | Female  | Kilimanjaro            | -3.0674    | 37.3556     |
+| Neurocysticercosis                    | 10-50 years  | Agricultural Laborers         | Poor Sanitation               | Any     | Morogoro               | -6.8222    | 37.6611     |
+| Herpes Simplex Encephalitis           | 20-50 years  | Sex Workers                   | Unsafe Sexual Practices       | Any     | Tanga                  | -5.0689    | 39.0988     |
+| Acute Hemorrhagic Stroke              | 40-80 years  | Elderly Individuals           | Hypertension                  | Any     | Zanzibar               | -6.1651    | 39.1980     |
+| Acute Subarachnoid Hemorrhage         | 30-60 years  | Corporate Professionals       | Aneurysms                     | Any     | Iringa                 | -7.7694    | 35.6922     |

@@ -1,0 +1,79 @@
+{
+  "notifiable_diseases": [
+    {
+      "type": "Bacterial Infections",
+      "diseases": [
+        {
+          "name": "Cholera",
+          "description": "Cholera is an acute gastrointestinal infection caused by Vibrio cholerae. Infection occurs through ingestion of contaminated water or food leading to severe diarrhoea and emesis associated with body fluid and electrolyte depletion.",
+          "clinical_presentation": [
+            "A sudden onset of painless watery diarrhoea that may quickly become severe with profuse watery stool",
+            "Vomiting",
+            "Severe dehydration and muscular cramps, leading to hypovolemic shock and death"
+          ],
+          "case_definition": [
+            "Suspected cholera case: In areas where a cholera outbreak has not been declared: Any patient aged two years and older presenting with acute watery diarrhoea and severe dehydration or dying from acute watery diarrhoea",
+            "In areas where a cholera outbreak is declared: any person presenting with or dying from acute watery diarrhoea",
+            "Confirmed cholera case: A suspected case with Vibrio cholerae O1 or O139 confirmed by culture or PCR"
+          ],
+          "laboratory_investigation": [
+            "Specimen: Liquid stool or rectal swab",
+            "Diagnostic test: Isolate V. cholerae from stool culture and determine O1 serotype using polyvalent antisera for V. cholerae O1. If desired, confirm identification with Inaba and Ogawa antisera",
+            "If specimen is not serotypable, consider V. cholerae O139",
+            "Antibiotic Susceptibility Testing before provision of antibiotics; Follow up 48 -72 hours after antibiotic initiation"
+          ],
+          "treatment": [
+            {
+              "class": "A",
+              "name": "Erythromycin",
+              "weight": "500mg (or 12.5 mg/kg)",
+              "frequency": "8 hourly",
+              "total_time_for_usage": "14 days"
+            },
+            {
+              "class": "A",
+              "name": "Tetracycline",
+              "weight": "500mg",
+              "frequency": "6 hourly",
+              "total_time_for_usage": "14 days"
+            },
+            {
+              "class": "C",
+              "name": "Ceftriaxone",
+              "weight": "2 grams",
+              "frequency": "daily",
+              "total_time_for_usage": "10-14 days",
+              "note": "preferred for patients with central nervous system involvement"
+            }
+          ],
+          "public_health_control": [
+            "Provide public education, awareness, preventive control measures, and avoidance of areas where infected ticks are most abundant",
+            "Assessing evidence of rodent activity in and around structures of infected people",
+            "Removal of rodents and their nests",
+            "Reduce tick exposures by removing tick infested structures with an appropriate pesticide applied by a professional pest control operator"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Viral Infections",
+      "diseases": [
+        {
+          "name": "Viral Haemorrhagic Fevers (VHF)",
+          "description": "Viral Haemorrhagic Fever (VHF) is a severe illness caused by viruses, sometimes associated with bleeding. Primary transmission is from animal to human through contact with an infected animal or its product. Secondary transmission is from person to person through contact with a sick person or direct contact with the blood and/or secretions.",
+          "public_health_control_measures": [
+            "Maintain strict viral haemorrhagic disease (VHD) infection prevention and control (IPC) practices throughout the outbreak",
+            "Mobilize the community for early detection and care and conduct community education about how the disease is transmitted and how to implement IPC in the home care setting and during funerals and burials",
+            "Conduct contact follow-up and active searches for additional cases that may not come to the health care setting",
+            "Establish an isolation ward or treatment centre to handle additional cases that may come to the health centre and ensure strict IPC measures to avoid transmission in health care settings"
+          ],
+          "isolation_and_treatment": [
+            "Suspected cases should be isolated and treated for more common conditions with similar symptoms",
+            "Provide psychosocial support for the family, community and staff",
+            "Consider quarantine for high risk contacts with home support during the incubation period and ensure daily follow up of their movements"
+          ]
+        }
+      ]
+    }
+  ]
+}

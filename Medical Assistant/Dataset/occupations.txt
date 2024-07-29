@@ -1,0 +1,33 @@
+| Occupation         | Diseases More Affected                                    |
+|--------------------|----------------------------------------------------------|
+| Farmers            | Malaria, Gastrointestinal Infections, Respiratory Infections |
+| Healthcare Workers | COVID-19, Tuberculosis, Hepatitis B                        |
+| Office Workers      | Sedentary Lifestyle-related Diseases, Stress-related Disorders, Diabetes Mellitus |
+| Construction Workers| Respiratory Infections, Musculoskeletal Injuries, Skin Infections |
+| Fishermen           | Waterborne Diseases, Skin Infections, Respiratory Infections |
+| Teachers            | Respiratory Infections, Stress-related Disorders, Common Cold |
+| Drivers             | Road Traffic Injuries, Respiratory Infections, Hypertension |
+| Merchants           | Hypertension, Diabetes Mellitus, Gastrointestinal Infections |
+| Miners              | Respiratory Infections, Occupational Lung Diseases, Musculoskeletal Injuries |
+| Tour Guides         | Vector-borne Diseases (e.g., Malaria), Gastrointestinal Infections, Sunburns |
+| Occupation            | Diseases More Affected                                    |
+| Agricultural Workers  | Malaria, Pesticide-related Illnesses, Respiratory Infections |
+| Hotel Staff           | Gastrointestinal Infections, Skin Infections, Stress-related Disorders |
+| Factory Workers       | Occupational Lung Diseases, Musculoskeletal Injuries, Skin Disorders |
+| Taxi Drivers          | Road Traffic Injuries, Stress-related Disorders, Hypertension |
+| IT Professionals      | Sedentary Lifestyle-related Disorders, Eye Strain, Stress-related Disorders |
+| Police Officers        | Injuries, Hypertension, Stress-related Disorders            |
+| Chefs/Cooks           | Foodborne Illnesses, Musculoskeletal Injuries, Dermatitis   |
+| Street Vendors        | Gastrointestinal Infections, Vector-borne Diseases, Skin Infections |
+| Cleaners/Janitors     | Respiratory Infections, Skin Infections, Musculoskeletal Injuries |
+| Artists/Musicians    | Hearing Loss, Stress-related Disorders, Respiratory Infections |
+| Veterinary Staff      | Zoonotic Infections, Respiratory Infections, Injuries     |
+| Tourist Guides        | Vector-borne Diseases, Gastrointestinal Infections, Sunburns |
+| Farmers               | Pesticide-related Illnesses, Musculoskeletal Injuries, Respiratory Infections |
+| Call Center Operators | Sedentary Lifestyle-related Disorders, Stress-related Disorders, Eye Strain |
+| Mining Engineers      | Occupational Lung Diseases, Musculoskeletal Injuries, Injuries |
+| Teachers              | Respiratory Infections, Stress-related Disorders, Common Cold |
+| Firefighters          | Injuries, Respiratory Infections, Stress-related Disorders |
+| Journalists           | Stress-related Disorders, Respiratory Infections, Repetitive Strain Injuries |
+| Taxi Drivers          | Road Traffic Injuries, Stress-related Disorders, Hypertension |
+| Agricultural Engineers | Musculoskeletal Injuries, Respiratory Infections, Skin Disorders |
