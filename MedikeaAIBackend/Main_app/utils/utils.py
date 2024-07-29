@@ -2,7 +2,7 @@ from Crypto.Cipher import DES3
 from Crypto.Random import get_random_bytes
 from Crypto.Util.Padding import pad, unpad
 from nltk.tokenize import word_tokenize
-# import gensim.downloader as api
+import gensim.downloader as api
 from nltk.corpus import stopwords
 import pandas as pd
 import numpy as np
@@ -16,7 +16,7 @@ nltk.download('wordnet')
 
 print('Loading Word2Vec model...')
 current_time = time.time()
-# word2vec_model = api.load('word2vec-google-news-150')
+word2vec_model = api.load('word2vec-google-news-150')
 
 
 end_time = time.time()
